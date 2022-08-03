@@ -9,8 +9,8 @@ This is only based on my preferred tools and apps.
 ```
 
 ## Command Line Tools
+
 - ZSH (ensure latest)
-- Oh My Zsh
 - Git (ensure latest)
 - pnpm
 - NVM

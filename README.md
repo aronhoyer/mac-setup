@@ -2,6 +2,12 @@
 
 This is only based on my preferred tools and apps.
 
+## Usage
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/setup.sh)"
+```
+
 ## Command Line Tools
 - ZSH (ensure latest)
 - Oh My Zsh

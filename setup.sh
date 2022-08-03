@@ -21,11 +21,17 @@ echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> $HOME/.zshrc
 
 # Install formulae
 
-xargs brew install < "$(curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/formulae)"
+for formula in $(curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/formulae)
+do
+	brew install $formula
+done
 
 # Install casks
 
-xargs brew install --cask < "$(curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/casks)" 
+for cask in $(curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/casks)
+do
+	brew install --cask $cask
+done
 
 # Install NVM
 

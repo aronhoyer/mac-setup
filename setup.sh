@@ -6,7 +6,6 @@ curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/.zshrc -o 
 curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/.fs_aliases -o $HOME/.fs_aliases
 curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/.git_aliases -o $HOME/.git_aliases
 
-echo '' >> $HOME/.zshrc
 echo 'source $HOME/.fs_aliases' >> $HOME/.zshrc
 echo 'source $HOME/.git_aliases' >> $HOME/.zshrc
 

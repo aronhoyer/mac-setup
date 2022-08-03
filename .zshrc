@@ -17,9 +17,6 @@ bindkey '\e[B' history-search-forward
 
 setopt autocd autopushd pushdignoredups
 
-source $HOME/.fs_alias
-source $HOME/.git_alias
-
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 

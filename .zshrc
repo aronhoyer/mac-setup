@@ -20,8 +20,6 @@ setopt autocd autopushd pushdignoredups
 source $HOME/.fs_alias
 source $HOME/.git_alias
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 

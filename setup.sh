@@ -2,6 +2,7 @@
 
 # Download .zshrc
 echo "Downloading dotfiles..."
+
 curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/.zshrc -o $HOME/.zshrc
 curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/.fs_aliases -o $HOME/.fs_aliases
 curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/.git_aliases -o $HOME/.git_aliases
@@ -15,7 +16,9 @@ xcode-select --install
 if ! command -v brew &> /dev/null
 then
 	echo "Installing Homebrew..."
+
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
 	echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> $HOME/.zshrc
 fi
 
@@ -47,6 +50,22 @@ echo 'export PATH="$PATH:$HOME/.cargo/bin:$(go env GOPATH)/bin:$(go env GOROOT)/
 source $HOME/.zshrc
 
 echo "Installing Node LTS..."
+
 nvm install --lts
 nvm use --lts
 nvm alias default node
+
+echo "Attempting to symlink Python..."
+
+if [[ $(sysctl machdep.cpu.brand_string) == *"Apple"*]]; then
+	brew_path="/opt/homebrew/opt"
+else
+	brew_path="/usr/local/Cellar"
+fi
+
+if command -v python &> /dev/null; then
+	echo "$(python --version) already installed at $(which python)"
+	echo "You can manually remove the existing Python executable and symlink the version installed by Homebrew ($(ls -l1 $brew_path | grep python))"
+else
+	cp -sRL $brew_path/$(ls -l1 $brew_path | grep python)/bin /usr/local/bin
+fi

@@ -1,3 +1,9 @@
 alias l="ls -al"
 alias ll="ls -l"
 alias rf="rm -rf"
+alias rd="rmdir"
+alias md="mkdir -p"
+
+function mc() {
+	mkdir -p $1 && cd $1
+}

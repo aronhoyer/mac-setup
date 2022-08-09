@@ -54,18 +54,3 @@ echo "Installing Node LTS..."
 nvm install --lts
 nvm use --lts
 nvm alias default node
-
-echo "Attempting to symlink Python..."
-
-if [[ $(sysctl machdep.cpu.brand_string) == *"Apple"*]]; then
-	brew_path="/opt/homebrew/opt"
-else
-	brew_path="/usr/local/Cellar"
-fi
-
-if command -v python &> /dev/null; then
-	echo "$(python --version) already installed at $(which python)"
-	echo "You can manually remove the existing Python executable and symlink the version installed by Homebrew ($(ls -l1 $brew_path | grep python))"
-else
-	cp -sRL $brew_path/$(ls -l1 $brew_path | grep python)/bin /usr/local/bin
-fi

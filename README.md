@@ -29,8 +29,6 @@ curl -fsSL https://raw.githubusercontent.com/aronhoyer/mac-setup/HEAD/.zshrc -o 
 - [Go](https://go.dev)
 - [NVM](https://github.com/nvm-sh/nvm)
 - [pnpm](https://pnpm.io)
-- [Python@3.10](https://python.org)
-- [The Fuck](https://github.com/nvbn/thefuck)
 - [Zsh](https://zsh.sourceforge.io)
 
 ## Apps

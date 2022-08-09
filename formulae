@@ -1,5 +1,7 @@
-zsh
 git
-pnpm
 go
-
+nvm
+pnpm
+python@3.10
+thefuck
+zsh

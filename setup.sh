@@ -41,7 +41,7 @@ then
 	curl https://sh.rustup.rs -sSf | sh -s -- -y # this will run rustup without confirmation prompt
 fi
 
-printf 'export NVM_DIR="$HOME/.nvm
+printf 'export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # load nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # load nvm bash_completion' >> $HOME/.zshrc
 

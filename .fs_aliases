@@ -7,3 +7,7 @@ alias md="mkdir -p"
 function mc() {
 	mkdir -p $1 && cd $1
 }
+
+function t() {
+	touch $1 &> /dev/null || mkdir -p "$(dirname $1)" && touch $1
+}

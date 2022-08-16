@@ -26,4 +26,3 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 HOST=SIVA
 
 PS1="%m %B%F{red}::%b%f %B%F{green}%3~%b%f %F{blue}%#%f %B%F{red}%(?..[%?] )%b%f"
-

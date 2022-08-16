@@ -12,10 +12,13 @@ setopt HIST_IGNORE_ALL_DUPS
 
 autoload -U compinit && compinit
 
+setopt autocd autopushd pushdignoredups
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' menu select
+
 bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
-
-setopt autocd autopushd pushdignoredups
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
